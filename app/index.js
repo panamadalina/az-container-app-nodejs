@@ -8,12 +8,8 @@ app.use(morgan('combined'));
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 });
-// app.get('/hello', (req, res) => {
-//   var nume = req.form.get('name')
-//   res.sendFile(__dirname + '/hello.html')
-// });
 
-var listener = app.listen(process.env.PORT || 92, function() {
+var listener = app.listen(process.env.PORT || 80, function() {
  console.log('listening on port ' + listener.address().port);
 });
 
